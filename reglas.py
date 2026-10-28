@@ -1,0 +1,30 @@
+topologicas={
+    "acantilado_p":
+        {
+            "No_Separado":{"funcion":"topo.noSeparado('No_Separado')"},
+            "Fuera_De":{   
+                            "funcion":"topo.fueraDe('Fuera_De')",
+                            "capas":["poligono_nacional_a"]
+                        }
+        },
+    "acueducto_l":
+        {
+            "Pseudonodos":{"funcion":"topo.pseudonodos('Pseudonodos')"},
+            "Sobreponerse":{"funcion":"topo.sobreponerse('Sobreponerse')"},
+            "Sobreponerse_Mismo":{"funcion":"topo.sobreponerse_mismo('Sobreponerse_Mismo')"},
+            "Intersecar_Mismo":{"funcion":"topo.intersecar_mismo('Intersecar_Mismo')"},
+            "Multiparte":{"funcion":"topo.multiparte('Multiparte')"},
+            "Sobreponerse_Con":{"funcion":"topo.sobreponerse_con('Sobreponerse_Con')","capas":["corriente_ag_l"] },
+            "Extremos_No_Conectan":{"funcion":"topo.extremos_no_conectan('Extremos_No_Conectan')","capas":["pozo_p"],"excepcion":"El pozo de agua se encuentra fuera de un radio de 5 metros"},
+            "Fuera_De":dict(funcion="topo.fueraDe('Fuera_De')",capas=["poligono_nacional_a"])
+        },
+    "curva_nivel_l":
+        {
+            "Pseudonodos":{"funcion":"topo.pseudonodos('Pseudonodos')"},
+            "Sobreponerse":{"funcion":"topo.sobreponerse('Sobreponerse')"},
+            "Sobreponerse_Mismo":{"funcion":"topo.sobreponerse_mismo('Sobreponerse_Mismo')"},
+            "Intersecar_Mismo":{"funcion":"topo.intersecar_mismo('Intersecar_Mismo')"},
+            "Multiparte":{"funcion":"topo.multiparte('Multiparte')"},
+            "Fuera_De":dict(funcion="topo.fueraDe('Fuera_De')",capas=["poligono_nacional_a"])
+        }
+}
